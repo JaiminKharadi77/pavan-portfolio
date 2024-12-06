@@ -5,12 +5,7 @@ function Type() {
   return (
     <Typewriter
       options={{
-        strings: [
-          "VFX Editor",
-          "Video Editor",
-          "After Effects Editor",
-          "Milf Hunter",
-        ],
+        strings: ["VFX Editor", "Video Editor", "After Effects Editor"],
         autoStart: true,
         loop: true,
         deleteSpeed: 50,
