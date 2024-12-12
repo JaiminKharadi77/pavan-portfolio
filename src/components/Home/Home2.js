@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/pavanProfile.jpg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -19,25 +19,14 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with creating visually stunning and impactful media
-              content.
-              <br />
-              <br />I specialize in
+              <br />I specialize in Diploma in
               <i>
-                <b className="purple">
-                  {" "}
-                  VFX Editing, Video Editing, and After Effects.{" "}
-                </b>
+                <b className="purple"> VFX Editing. </b>
               </i>
-              <br />
-              <br />
               My field of interest lies in crafting captivating videos, editing
               special effects, and pushing creative boundaries in digital media.
               <i>
-                <b className="purple">
-                  {" "}
-                  Adobe After Effects, Premiere Pro, and DaVinci Resolve
-                </b>
+                <b className="purple"> Adobe After Effects and Premiere Pro</b>
               </i>
               &nbsp; are my tools of choice.
               <br />
@@ -49,7 +38,12 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img
+                src={myImg}
+                className="img-fluid"
+                alt="avatar"
+                style={{ borderRadius: "3000px" }}
+              />
             </Tilt>
           </Col>
         </Row>

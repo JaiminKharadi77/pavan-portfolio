@@ -741,3 +741,9 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+.nav-logo {
+  color: #cd5ff8;
+  font-size: 3rem;
+  font-weight: 900;
+}
