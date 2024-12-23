@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/pavan_resume.pdf";
+import pdf from "../../Assets/pavan-resume.pdf";
+import pdfPreviewImage from "../../Assets/pdf_preview_image.png";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
+import { pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
-
   return (
     <div>
-      <Container fluid className="resume-section">
+      <Container
+        fluid
+        className="resume-section d-flex flex-column justify-content-center align-items-center"
+        style={{ minHeight: "100vh" }} // Ensures full-page centering
+      >
         <Particle />
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+
+        {/* First Button */}
+        <Row className="justify-content-center mb-4">
           <Button
             variant="primary"
             href={pdf}
@@ -31,13 +31,17 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
+        {/* Image */}
+        <Row className="justify-content-center mb-4">
+          <img
+            src={pdfPreviewImage}
+            alt="pdf preview"
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
         </Row>
 
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        {/* Second Button */}
+        <Row className="justify-content-center">
           <Button
             variant="primary"
             href={pdf}

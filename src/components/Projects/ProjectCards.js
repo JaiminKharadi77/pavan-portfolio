@@ -49,7 +49,7 @@ const ProjectCards = ({ videoUrl, title, description }) => {
       </div>
       <Card.Body>
         {title && <Card.Title>{title}</Card.Title>}
-        <Card.Text style={{ textAlign: "justify" }}>{description}</Card.Text>
+        <Card.Text style={{ textAlign: "center" }}>{description}</Card.Text>
       </Card.Body>
     </Card>
   );

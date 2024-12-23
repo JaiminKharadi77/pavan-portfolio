@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Particle from "../Particle";
-// import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/image-14x.png";
@@ -55,21 +54,16 @@ function About() {
             <Card className="quote-card-view">
               <Card.Body>
                 <blockquote className="blockquote mb-0">
-                  <p style={{ textAlign: "justify" }}>
+                  <p style={{ textAlign: "start" }}>
                     I have completed my VFX graduation from{" "}
                     <span className="purple">Fx School</span>, located in the
-                    scenic city of Manali,{" "}
-                    <span className="purple">Bhubaneswar, India</span>.
+                    city of Andheri(W),{" "}
+                    <span className="purple">Maharastra, India</span>.
                     <br />
                     <br />
                     My training at Fx School equipped me with the skills to
                     bring visual storytelling to life, combining creativity and
                     technical expertise.
-                    <br />
-                    <br />
-                    I am currently employed as a software developer at Juspay,
-                    but my passion for VFX and creative work continues to
-                    inspire me in my coding journey.
                     <br />
                   </p>
                 </blockquote>

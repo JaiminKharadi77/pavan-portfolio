@@ -7,7 +7,7 @@ function AboutCard() {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
+          <p style={{ textAlign: "start" }}>
             Hi Everyone, I am <span className="purple">Pavan Rohera </span>
             from <span className="purple">Vapi, India.</span>
             <br />
@@ -22,10 +22,10 @@ function AboutCard() {
               <ImPointRight /> Playing Games
             </li>
             <li className="about-activity">
-              <ImPointRight /> Exploring Creative Art
+              <ImPointRight /> Watching and playing football
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Listening music
             </li>
           </ul>
 
