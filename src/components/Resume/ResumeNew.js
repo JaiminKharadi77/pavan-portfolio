@@ -1,8 +1,8 @@
 import { Container, Row } from "react-bootstrap";
 import { Button } from "@mui/material";
 import Particle from "../Particle";
-import pdf from "../../Assets/pavan-resume.pdf";
-import pdfPreviewImage from "../../Assets/pdf_preview_image.png";
+import pdf from "../../Assets/pavan-resume2.pdf";
+import pdfPreviewImage from "../../Assets/pdf_preview_image2.png";
 import { AiOutlineDownload } from "react-icons/ai";
 import { pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
