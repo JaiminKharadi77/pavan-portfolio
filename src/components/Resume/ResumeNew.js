@@ -1,5 +1,5 @@
 import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { Button } from "@mui/material";
 import Particle from "../Particle";
 import pdf from "../../Assets/pavan-resume.pdf";
 import pdfPreviewImage from "../../Assets/pdf_preview_image.png";
@@ -17,20 +17,6 @@ function ResumeNew() {
         style={{ minHeight: "100vh" }} // Ensures full-page centering
       >
         <Particle />
-
-        {/* First Button */}
-        <Row className="justify-content-center mb-4">
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
-        </Row>
-
         {/* Image */}
         <Row className="justify-content-center mb-4">
           <img
@@ -38,12 +24,22 @@ function ResumeNew() {
             alt="pdf preview"
             style={{ maxWidth: "100%", height: "auto" }}
           />
-        </Row>
-
-        {/* Second Button */}
-        <Row className="justify-content-center">
+        </Row>{" "}
+        {/* First Button */}
+        <Row className="justify-content-center mb-4">
           <Button
-            variant="primary"
+            variant="contained"
+            sx={{
+              backgroundColor: "#8054A2",
+              "&:hover": {
+                backgroundColor: "#AD75D3", // Keep the same color on hover
+              },
+              color: "white !important", // Default text color
+              "&:hover span": {
+                color: "white !important", // Ensure the text color doesn't change on hover
+              },
+            }}
+            color="primary"
             href={pdf}
             target="_blank"
             style={{ maxWidth: "250px" }}

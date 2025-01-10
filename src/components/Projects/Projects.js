@@ -1,82 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Button } from "@mui/material";
+import Grid2 from "@mui/material/Grid2";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-
-// const grdiveData = [
-//   {
-//     videoUrl:
-//       "https://drive.google.com/file/d/1XL4myEQOWC6Zl7-fI2lF0wXlHDRWqj4w/view?usp=drive_link",
-//     title: "Akshar Dental Promo Video",
-//     description:
-//       "A promotional video showcasing Akshar Dental services, highlighting key treatments and the clinic's features.",
-//   },
-//   {
-//     videoUrl:
-//       "https://drive.google.com/file/d/1JhVg3NEaXtLPkXCZy6jytoVdx0LuM4w4/view?usp=drive_link",
-//     title: "Humanec Employee Tracking Reel",
-//     description:
-//       "A dynamic reel showcasing Humanec's employee tracking features, perfect for business presentations and marketing.",
-//   },
-//   {
-//     videoUrl:
-//       "https://drive.google.com/file/d/1SWkBEWLuC6PpuRSxvfLPirHd8aKIdpW1/view?usp=drive_link",
-//     title: "Humanec AI Showcase",
-//     description:
-//       "A detailed reel demonstrating Humanec's AI capabilities, offering insights into the innovative solutions it provides.",
-//   },
-//   {
-//     videoUrl:
-//       "https://drive.google.com/file/d/1d3B7346upTbTrniTWcK3Rh-AaYnqgKEl/view?usp=drive_link",
-//     title: "Marbel Stop Motion Animation",
-//     description:
-//       "A captivating stop-motion animation reel featuring Marbel's creative designs, perfect for visual storytelling.",
-//   },
-//   {
-//     videoUrl:
-//       "https://drive.google.com/file/d/1BLiBAapgm4uJJfH0c2rZOm_Og0PGxS_T/view?usp=drive_link",
-//     title: "Millenium Marbel Advertisement",
-//     description:
-//       "An engaging advertisement reel showcasing the Millenium Marbel products, emphasizing their uniqueness and quality.",
-//   },
-//   {
-//     videoUrl:
-//       "https://drive.google.com/file/d/1X1FLfbE03Dqs0x320YBQju1B5tKvwTQU/view?usp=drive_link",
-//     title: "Miracle Salon Christmas Special",
-//     description:
-//       "A festive Christmas special reel for Miracle Salon, highlighting holiday offers and seasonal promotions.",
-//   },
-//   {
-//     videoUrl:
-//       "https://drive.google.com/file/d/17gQKgCChx-FJdjEw1NDCMXOcuR6i2CR9/view?usp=drive_link",
-//     title: "Xira CGI Services Portfolio",
-//     description:
-//       "A reel showcasing Xira's high-quality CGI services, featuring stunning visual effects and 3D animation work.",
-//   },
-//   {
-//     videoUrl:
-//       "https://drive.google.com/file/d/1XS3qRQwnaOjVb5zhWKXO0fwL7SpEwDt0/view?usp=drive_link",
-//     title: "Xira Diwali Celebration Reel",
-//     description:
-//       "A vibrant reel capturing the spirit of Diwali through Xira's innovative visuals, celebrating the festival of lights.",
-//   },
-//   {
-//     videoUrl:
-//       "https://drive.google.com/file/d/1JhVg3NEaXtLPkXCZy6jytoVdx0LuM4w4/view?usp=drive_link",
-//     title: "Xira Services Highlights",
-//     description:
-//       "An informative reel showcasing the diverse services offered by Xira, with a focus on creativity and client satisfaction.",
-//   },
-//   {
-//     videoUrl:
-//       "https://drive.google.com/file/d/1PkgRgVD_D8AXqxBuft5D6HA8iTGF_Cqq/view?usp=drive_link",
-//     title: "Xira Services Final Showcase",
-//     description:
-//       "A final showcase reel summarizing Xira's top services, highlighting key projects and customer testimonials.",
-//   },
-// ];
+import ShortFormatModal from "./Components/Modal";
+import ImgCard from "./Components/ImgCard";
+import ShortsImage from "../../Assets/short.f9548875e473fc0c4c76.jpg";
+import DreamHackImage from "../../Assets/dreamhack.25c36bffe50ad847360f.jpg";
+import LongWorkImage from "../../Assets/download.jpg";
 
 const projectData = [
+  {
+    videoUrl: "https://www.youtube.com/watch?v=HE937xDZ-D4",
+    description: "sosiyo drink product edit",
+  },
   {
     videoUrl: "https://www.youtube.com/watch?v=QL0VbToZbCU",
     description: "Akshar dental clinic 25 years anniversary",
@@ -85,10 +23,7 @@ const projectData = [
     videoUrl: "https://www.youtube.com/watch?v=gmlfQP2v-Cw",
     description: "glazers games office reveal video",
   },
-  {
-    videoUrl: "https://www.youtube.com/watch?v=HE937xDZ-D4",
-    description: "sosiyo drink product edit",
-  },
+
   {
     videoUrl: "https://www.youtube.com/watch?v=RsqjneWltgs",
     description: "College Rivals After Movie",
@@ -108,6 +43,10 @@ const projectData = [
 ];
 
 const dataReels = [
+  {
+    videoUrl: "https://www.youtube.com/shorts/e9bkb-8XmNI",
+    description: "CGI Composition for learning",
+  },
   {
     videoUrl: "https://www.youtube.com/watch?v=i6KC6nF4-yM",
     description: "Valorant Lan Event Reel",
@@ -168,21 +107,17 @@ const dataReels = [
     videoUrl: "https://www.youtube.com/shorts/4ff-Qtwk2V8",
     description: "2d pacman animation",
   },
-  {
-    videoUrl: "https://www.youtube.com/shorts/e9bkb-8XmNI",
-    description: "CGI Composition for learning",
-  },
 ];
 
 const dreamHackData = [
   {
-    videoUrl: "https://www.youtube.com/watch?v=O4l25b_kksM",
-    description:
-      "An extended video featuring vibrant scenes and thrilling action from DreamHack.",
+    videoUrl: "https://www.youtube.com/watch?v=sjpiKzl55r0",
+    description: "Dream Hack Velocity edit",
   },
   {
     videoUrl: "https://www.youtube.com/watch?v=O4l25b_kksM",
-    description: "Vlog Edit",
+    description:
+      "An extended video featuring vibrant scenes and thrilling action from DreamHack.",
   },
   {
     videoUrl: "https://www.youtube.com/watch?v=YfcHkbsvd0E",
@@ -204,16 +139,11 @@ const dreamHackData = [
     videoUrl: "https://www.youtube.com/watch?v=lcR04XjU35s",
     description: "Dream Day 3 vlog teaser reel",
   },
-  {
-    videoUrl: "https://www.youtube.com/watch?v=sjpiKzl55r0",
-    description: "Dream Hack Velocity edit",
-  },
 ];
 
 const ProjectSection = ({ heading, projects, spanText = "" }) => (
   <>
     <h1
-      className=""
       style={{
         color: "white",
         fontSize: "2.3em",
@@ -238,24 +168,63 @@ const ProjectSection = ({ heading, projects, spanText = "" }) => (
 );
 
 function Projects() {
+  const [modals, setModals] = useState({
+    modalOpen: false,
+    dreamhackModal: false,
+    longformatWork: false,
+  });
+
+  const toggleModal = (modalName) => {
+    setModals((prev) => ({
+      ...prev,
+      [modalName]: !prev[modalName],
+    }));
+  };
+
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <ProjectSection
-          heading="My Recent"
-          projects={[...projectData]}
-          spanText="Projects"
+        <Grid2 container spacing={2} justifyContent="space-around">
+          <Grid2 item xs={12} sm={6} md={3}>
+            <ImgCard
+              imageUrl={LongWorkImage}
+              title={"Long Work"}
+              onClick={() => toggleModal("longformatWork")}
+            />
+          </Grid2>
+          <Grid2 item xs={12} sm={6} md={3}>
+            <ImgCard
+              imageUrl={ShortsImage}
+              title={"Shorts Work"}
+              onClick={() => toggleModal("modalOpen")}
+            />
+          </Grid2>{" "}
+          <Grid2 item xs={12} sm={6} md={3}>
+            <ImgCard
+              imageUrl={DreamHackImage}
+              title={"Dream Hack"}
+              onClick={() => toggleModal("dreamhackModal")}
+            />
+          </Grid2>{" "}
+        </Grid2>
+        <ShortFormatModal
+          open={modals.modalOpen}
+          title={"Short Format Work"}
+          onClose={() => toggleModal("modalOpen")}
+          dataReels={dataReels}
+        />{" "}
+        <ShortFormatModal
+          open={modals.longformatWork}
+          title={"Long Format Work"}
+          onClose={() => toggleModal("longformatWork")}
+          dataReels={projectData}
         />
-        <ProjectSection
-          heading="Dream"
-          projects={dreamHackData}
-          spanText="Hack"
-        />
-        <ProjectSection
-          heading="Short Format"
-          projects={dataReels}
-          spanText="Work"
+        <ShortFormatModal
+          open={modals.dreamhackModal}
+          title={"Dream Hack"}
+          onClose={() => toggleModal("dreamhackModal")}
+          dataReels={dreamHackData}
         />
       </Container>
     </Container>
